@@ -1,0 +1,160 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Instale la versión más reciente de PowerShell para obtener nuevas características y mejoras. https://aka.ms/PSWindows
+
+PS C:\Users\Usuario> mongosh --host localhost --port 27017
+Current Mongosh Log ID: 6747d34523d9a1fb030d818f
+Connecting to:          mongodb://localhost:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
+Using MongoDB:          8.0.3
+Using Mongosh:          2.3.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-11-27T20:32:28.331-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+rs0 [direct: primary] test> use torneo
+switched to db torneo
+rs0 [direct: primary] torneo> show collections
+campeon
+datos_de_los_entrenadores
+encuentros_deportivos
+equipo_aguilas
+equipo_condores
+equipo_halcones
+equipo_leones
+equipo_panteras
+equipo_tiburones
+equipos_de_futbol
+equipos_del_torneo
+nombres_de_los_arbitros
+partido_final
+tabla_de_posiciones
+rs0 [direct: primary] torneo> db.encuentros_deportivos.find()
+[
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81de'),
+    encuentro: 'Encuentro 1',
+    equipo1: 'Tiburones',
+    equipo2: 'Leones',
+    resultado: '3-1'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81df'),
+    encuentro: 'Encuentro 2',
+    equipo1: 'Halcones',
+    equipo2: 'Águilas',
+    resultado: '2-2'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e0'),
+    encuentro: 'Encuentro 3',
+    equipo1: 'Cóndores',
+    equipo2: 'Panteras',
+    resultado: '1-0'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e1'),
+    encuentro: 'Encuentro 4',
+    equipo1: 'Tiburones',
+    equipo2: 'Halcones',
+    resultado: '0-1'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e2'),
+    encuentro: 'Encuentro 5',
+    equipo1: 'Leones',
+    equipo2: 'Águilas',
+    resultado: '2-1'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e3'),
+    encuentro: 'Encuentro 6',
+    equipo1: 'Cóndores',
+    equipo2: 'Tiburones',
+    resultado: '3-3'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e4'),
+    encuentro: 'Encuentro 7',
+    equipo1: 'Panteras',
+    equipo2: 'Halcones',
+    resultado: '0-2'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e5'),
+    encuentro: 'Encuentro 8',
+    equipo1: 'Águilas',
+    equipo2: 'Tiburones',
+    resultado: '1-2'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e6'),
+    encuentro: 'Encuentro 9',
+    equipo1: 'Leones',
+    equipo2: 'Cóndores',
+    resultado: '1-1'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e7'),
+    encuentro: 'Encuentro 10',
+    equipo1: 'Panteras',
+    equipo2: 'Águilas',
+    resultado: '2-0'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e8'),
+    encuentro: 'Encuentro 11',
+    equipo1: 'Tiburones',
+    equipo2: 'Panteras',
+    resultado: '3-2'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81e9'),
+    encuentro: 'Encuentro 12',
+    equipo1: 'Halcones',
+    equipo2: 'Cóndores',
+    resultado: '0-1'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81ea'),
+    encuentro: 'Encuentro 13',
+    equipo1: 'Águilas',
+    equipo2: 'Leones',
+    resultado: '1-3'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81eb'),
+    encuentro: 'Encuentro 14',
+    equipo1: 'Panteras',
+    equipo2: 'Leones',
+    resultado: '1-1'
+  },
+  {
+    _id: ObjectId('67469d82a9d524bcd00d81ec'),
+    encuentro: 'Encuentro 15',
+    equipo1: 'Halcones',
+    equipo2: 'Águilas',
+    resultado: '2-0'
+  }
+]
+rs0 [direct: primary] torneo> db.encuentros_deportivos.drop()
+true
+rs0 [direct: primary] torneo> show collections
+campeon
+datos_de_los_entrenadores
+equipo_aguilas
+equipo_condores
+equipo_halcones
+equipo_leones
+equipo_panteras
+equipo_tiburones
+equipos_de_futbol
+equipos_del_torneo
+nombres_de_los_arbitros
+partido_final
+tabla_de_posiciones
+rs0 [direct: primary] torneo>
